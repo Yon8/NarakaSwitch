@@ -6,7 +6,7 @@ from localVersion import get_local_version, set_local_version
 from tomlLoad import load_config, modify_toml
 from getGameInit import get_steam_GameInit
 from switchPlatform import switch_to_netease, switch_to_steam
-
+from updateRepair import update_repair
 
 config = load_config()
 platform = config['config']['platform']
@@ -30,6 +30,7 @@ if local_version != new_version:
     elif is_update == '2':
         set_local_version(netease_path, new_version)
         local_version = new_version
+        update_repair(netease_path)
         get_steam_GameInit(netease_path)
     else:
         sys.exit()

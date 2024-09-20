@@ -10,7 +10,7 @@ tmol_name = "config.toml"
 def load_config():
     if not os.path.exists(tmol_name):
         # 文件不存在，创建一个默认的TOML文件
-        default_config = "[config]\n# 如E:\\Naraka\nnetease_path = \"\"\n# 0.未初始化 1.steam 2.netease\nplatform = 0"
+        default_config = "[config]\n# 如E:\\\\Naraka 双反斜杠\nnetease_path = \"\"\n# 0.未初始化 1.steam 2.netease\nplatform = 0"
         with open(tmol_name, "w", encoding="utf-8") as f:
             f.write(default_config)
         print("默认配置文件不存在，创建配置文件,请修改配置文件后再次运行程序！")
