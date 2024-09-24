@@ -31,6 +31,8 @@ if local_version != new_version:
         set_local_version(netease_path, new_version)
         local_version = new_version
         update_repair(netease_path)
+        # 修改配置文件为Steam端
+        modify_toml("config", "platform", 1)
         get_steam_GameInit(netease_path)
     else:
         sys.exit()

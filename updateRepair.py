@@ -13,7 +13,7 @@ fetch_base_url = "https://d90.gdl.netease.com/publish/" + get_new_version() + "/
 
 def update_repair(netease_path):
     for file in repair_file:
-        print(fetch_base_url + file)
+        print("修补" + file)
         fetch_url = fetch_base_url + file
         response = requests.get(fetch_url, stream=True)
 
