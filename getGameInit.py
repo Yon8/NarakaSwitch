@@ -7,7 +7,7 @@ from newVersion import get_new_version
 
 # 拼接最新版本GameInit文件地址
 GameInit_fetch_url = "https://d90.gdl.netease.com/publish/" + get_new_version() + "/program/NarakaBladepoint_Data" \
-                                                                                  "/StreamingAssets/GameInit "
+                                                                                  "/StreamingAssets/GameInit"
 
 
 

@@ -4,11 +4,8 @@ import requests
 
 from newVersion import get_new_version
 
-repair_file = ['NE_SamplingPlugin.dll','NE_NvNgxDlss.dll','NarakaBladepoint.exe','GameAssembly.dll',
-               'NtUniSDKResources.dll','NeacSafe64.sys','NtUniSdkBase.dll','NeacClient.exe',
-               'NtUniSdkMpay.dll','NeacInterface.dll','UnityCrashHandler64.exe','StartGame.exe',
-               'UnityPlayer.dll','ffx_fsr2_api_dx11_x64.dll','ffx_backend_dx12_x64.dll','mpay.dll',
-               'libxess.dll','unisdk_dll_load_whitelist','nvngx_dlss.dll']
+repair_file = ['NtUniSDKResources.dll','NtUniSdkBase.dll', 'NtUniSdkMpay.dll','mpay.dll'
+               ,'NtUniSdkGMBridge.dll','NtUniSdkNgWebview.dll','unisdk_dll_load_whitelist','webview_support_helper.dll']
 fetch_base_url = "https://d90.gdl.netease.com/publish/" + get_new_version() + "/program/"
 
 def update_repair(netease_path):

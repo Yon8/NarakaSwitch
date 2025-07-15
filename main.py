@@ -5,6 +5,7 @@ from newVersion import get_new_version
 from localVersion import get_local_version, set_local_version
 from tomlLoad import load_config, modify_toml
 from getGameInit import get_steam_GameInit
+from getDllFiles import get_steam_dll
 from switchPlatform import switch_to_netease, switch_to_steam
 from updateRepair import update_repair
 
@@ -45,6 +46,7 @@ if local_version == new_version:
             sys.exit()
         elif is_steam == '2':
             get_steam_GameInit(netease_path)
+            get_steam_dll(netease_path)
             modify_toml("config", "platform", 1)
             platform = 1
         else:
